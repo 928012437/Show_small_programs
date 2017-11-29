@@ -1,0 +1,24 @@
+
+<view class="news" >
+    <view class="cate">
+       <block wx:for="{{cats}}" wx:key="unique">
+        <view class="cate-item {{currentTabsIndex==item.id?'hover':''}}" style="{{currentTabsIndex==item.id ?'border-color:'+tcolor+';color:'+tcolor:''}}" bindtap="catClick" data-cid='{{item.id}}' data-fid='{{item.fid}}'> 
+           {{item.name}}
+        </view>
+       </block> 
+    </view>
+    <view class="news-div">
+          <view class="image-item" wx:for="{{list}}" wx:key="{{index}}">
+        <navigator url="{{item.url}}" >
+           <image src="{{item.thumb}}"></image>
+           <view class="image-item-bg image-position"></view>
+           <view class="image-item-text image-position">{{item.title}}</view>
+        </navigator>  
+      </view>
+    </view>
+</view> 
+<view class="loadMore" bindtap="loadMore" data-lastid='{{lastid}}'>加载更多</view>
+<view class="copyright mt40">{{copyright}}</view>
+<!--这里是底部菜单  -->
+<import src="../public/foot.wxml" />
+<template is="foot" data="{{blist}}" /> 

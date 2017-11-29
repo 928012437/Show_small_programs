@@ -1,0 +1,21 @@
+{
+	"pages": [
+    "yyf_company/pages/index/index",
+    "yyf_company/pages/imglist/imglist",
+    "yyf_company/pages/message/message",
+    "yyf_company/pages/contact/contact",
+    "yyf_company/pages/case/case",
+    "yyf_company/pages/content/content",
+    "yyf_company/pages/about/about",
+    "yyf_company/pages/news/news",
+    "yyf_company/pages/video/video",
+    "yyf_company/pages/newsnoimg/newsnoimg"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2d7dee",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white"
+  }
+  
+}

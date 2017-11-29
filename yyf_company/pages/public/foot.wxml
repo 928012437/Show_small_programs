@@ -1,0 +1,95 @@
+   <template name="foot">
+  <view class="we7-bottom" style="background-color:{{blist.background_color}};border-color:{{blist.border_color}};" >
+    <block wx:if="{{blist.m1_name!=''}}">
+     <view class="we7-bottom-item" >
+
+        <button bindtap="{{blist.m1_path=='tel' ? 'tel' : ''}}{{blist.m1_path=='driver' ? 'driver' : ''}}" wx:if="{{blist.m1_path=='custom' ||blist.m1_path=='tel' || blist.m1_path=='driver'}}" open-type="{{blist.m1_path=='custom' ? 'contact' : ''}}"></button>
+        <navigator wx:if="{{blist.m1_path!='custom' && blist.m1_path!='tel' && blist.m1_path!='driver'}}" url="{{blist.path1}}" open-type="redirectTo" hover-class="active">
+        </navigator>
+
+        <block wx:if="{{blist.isCurrentPage && blist.currentNum==1}}">
+          <image src="{{blist.m1_selimg}}" mode="widthFix" class="item-img"></image>
+        </block>
+        <block wx:if="{{!blist.isCurrentPage || blist.currentNum!=1}}">
+          <image src="{{blist.m1_img}}" mode="widthFix" class="item-img"></image>
+        </block>
+        <block wx:if="{{blist.isCurrentPage && blist.currentNum==1}}">
+          <view class="item-text" style="color: {{blist.sel_color}}">{{blist.m1_name}}</view>
+        </block>
+        <block wx:if="{{!blist.isCurrentPage || blist.currentNum!=1}}">
+          <view class="item-text" style="color: {{blist.color}}">{{blist.m1_name}}</view>
+        </block>
+            
+      </view>
+    </block> 
+
+    <block wx:if="{{blist.m2_name!=''}}" >
+     <view class="we7-bottom-item" >
+        <button bindtap="{{blist.m2_path=='tel' ? 'tel' : ''}}{{blist.m2_path=='driver' ? 'driver' : ''}}" wx:if="{{blist.m2_path=='custom' ||blist.m2_path=='tel' || blist.m2_path=='driver'}}" open-type="{{blist.m2_path=='custom' ? 'contact' : ''}}"></button>
+
+        <navigator wx:if="{{blist.m2_path!='custom' && blist.m2_path!='tel' && blist.m2_path!='driver'}}" url="{{blist.path2}}" open-type="redirectTo" hover-class="active">
+        </navigator>
+         
+            <block wx:if="{{blist.isCurrentPage && blist.currentNum==2}}">
+              <image src="{{blist.m2_selimg}}" mode="widthFix" class="item-img"></image>
+            </block>
+            <block wx:if="{{!blist.isCurrentPage || blist.currentNum!=2}}">
+              <image src="{{blist.m2_img}}" mode="widthFix" class="item-img"></image>
+            </block>
+            <block wx:if="{{blist.isCurrentPage && blist.currentNum==2}}">
+              <view class="item-text" style="color: {{blist.sel_color}}">{{blist.m2_name}}</view>
+            </block>
+            <block wx:if="{{!blist.isCurrentPage || blist.currentNum!=2}}">
+              <view class="item-text" style="color: {{blist.color}}">{{blist.m2_name}}</view>
+            </block>
+            
+      </view>
+    </block> 
+
+    <block wx:if="{{blist.m3_name!=''}}">
+     <view class="we7-bottom-item">
+
+         <button bindtap="{{blist.m3_path=='tel' ? 'tel' : ''}}{{blist.m3_path=='driver' ? 'driver' : ''}}" wx:if="{{blist.m3_path=='custom' ||blist.m3_path=='tel' || blist.m3_path=='driver'}}" open-type="{{blist.m3_path=='custom' ? 'contact' : ''}}"></button>
+        <navigator wx:if="{{blist.m3_path!='custom' && blist.m3_path!='tel' && blist.m3_path!='driver'}}" url="{{blist.path3}}" open-type="redirectTo" hover-class="active">
+        </navigator>
+
+            <block wx:if="{{blist.isCurrentPage && blist.currentNum==3}}">
+              <image src="{{blist.m3_selimg}}" mode="widthFix" class="item-img"></image>
+            </block>
+            <block wx:if="{{!blist.isCurrentPage || blist.currentNum!=3}}">
+              <image src="{{blist.m3_img}}" mode="widthFix" class="item-img"></image>
+            </block>
+            <block wx:if="{{blist.isCurrentPage && blist.currentNum==3}}">
+              <view class="item-text" style="color: {{blist.sel_color}}">{{blist.m3_name}}</view>
+            </block>
+            <block wx:if="{{!blist.isCurrentPage || blist.currentNum!=3}}">
+              <view class="item-text" style="color: {{blist.color}}">{{blist.m3_name}}</view>
+            </block>
+            
+      </view>
+    </block> 
+
+    <block wx:if="{{blist.m4_name!=''}}">
+     <view class="we7-bottom-item">
+            <button bindtap="{{blist.m4_path=='tel' ? 'tel' : ''}}{{blist.m4_path=='driver' ? 'driver' : ''}}" wx:if="{{blist.m4_path=='custom' ||blist.m4_path=='tel' || blist.m4_path=='driver'}}" open-type="{{blist.m4_path=='custom' ? 'contact' : ''}}"></button>
+        <navigator wx:if="{{blist.m4_path!='custom' && blist.m4_path!='tel' && blist.m4_path!='driver'}}" url="{{blist.path4}}" open-type="redirectTo" hover-class="active">
+        </navigator>
+            <block wx:if="{{blist.isCurrentPage && blist.currentNum==4}}">
+              <image src="{{blist.m4_selimg}}" mode="widthFix" class="item-img"></image>
+            </block>
+            <block wx:if="{{!blist.isCurrentPage || blist.currentNum!=4}}">
+              <image src="{{blist.m4_img}}" mode="widthFix" class="item-img"></image>
+            </block>
+            <block wx:if="{{blist.isCurrentPage && blist.currentNum==4}}">
+              <view class="item-text" style="color: {{blist.sel_color}}">{{blist.m4_name}}</view>
+            </block>
+            <block wx:if="{{!blist.isCurrentPage || blist.currentNum!=4}}">
+              <view class="item-text" style="color: {{blist.color}}">{{blist.m4_name}}</view>
+            </block>
+            
+      </view>
+    </block> 
+
+  </view>
+<view class="we7-bottom-placeholder"></view>
+</template>
